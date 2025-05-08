@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Discord bot for getting Bible verses."""
 
+from os import environ
 from typing import Optional
 
 import discord
@@ -11,7 +12,7 @@ from pylsb.data import BOOKS, TITLES
 from pylsb.parse import get_scripture
 from pylsb_cli.bible_format import bible_label
 
-from config import TOKEN
+TOKEN = environ.get('DISCORD_TOKEN')
 
 intents = discord.Intents.default()
 intents.message_content = True
