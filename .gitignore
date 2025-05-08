@@ -1,0 +1,9 @@
+# Python Dev
+/__pycache__/
+/venv/
+
+# The Bot
+/config.py
+
+# PyLSB
+/cache/lsbible.json

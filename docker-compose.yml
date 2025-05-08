@@ -1,0 +1,7 @@
+services:
+  biblecord:
+    build: .
+    #image: registry.gitlab.matthewrease.net/matthew/biblecord:latest
+    volumes:
+      - bible_config:/app/config.py
+      - bible_cache:/app/cache
