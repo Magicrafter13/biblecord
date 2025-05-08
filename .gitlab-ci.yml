@@ -55,7 +55,7 @@ deploy-alpha:
     - mkdir -p ~/.ssh
     - ssh-keyscan $SSH_HOST >> ~/.ssh/known_hosts
   script:
-    - ssh -i "$SSH_PRIVATE_KEY" "$SSH_USER@$SSH_HOST" "deploy $CI_COMMIT_SHA"
+    - ssh -i "$SSH_PRIVATE_KEY" "$SSH_USER@$SSH_HOST" "deploy $CI_COMMIT_SHORT_SHA"
   rules:
     - if: '$CI_COMMIT_BRANCH && $CI_SERVER_HOST == "gitlab.matthewrease.net"'
       when: always
