@@ -78,7 +78,7 @@ async def scripture(
                 '\n'.join([
                     # Between verses
                     ' '.join([
-                        (f'## {"\n## ".join(TITLES[BOOKS.index(book_title)])}' if chapter_number == 1 and verse_number == 1 else '') +
+                        (f'## {"\n## ".join(TITLES[BOOKS.index(book_title)].split("\n"))}' if chapter_number == 1 and verse_number == 1 else '') +
                         (f'\n### {verse["heading"]}\n' if verse["heading"] else '') +
                         f'[{verse_number}] {
                             (" ".join(verse["text"]))
