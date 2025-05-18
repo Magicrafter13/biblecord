@@ -83,9 +83,10 @@ async def scripture(
                         f'[{verse_number}] {
                             (" ".join(verse["text"]))
                             .replace("\x1b[31m", "**")
+                            .replace(" \x1b[39m", "** ")
                             .replace("\x1b[39m", "**")
-                            .replace("\x1b[3m", "*")
-                            .replace(" \x1b[23m", "* ")}'
+                            .replace("\x1b[3m", "_")
+                            .replace(" \x1b[23m", "_ ")}'
                         for verse_number, verse in chapter.items()
                     ])
                     for chapter_number, chapter in book.items()
